@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.Assert;
 
 public class InboxLoginTestPages {
@@ -17,8 +18,8 @@ public class InboxLoginTestPages {
     @Test
     public void varifyValidLogin() {
 
-        System.setProperty("webdriver.gecko.driver", "C:/geckodriver.exe");
-        WebDriver driver = new FirefoxDriver();
+        System.setProperty("webdriver.ie.driver", "C:/IEDriverServer.exe");
+        WebDriver driver = new InternetExplorerDriver();
         driver.manage().window().maximize();
         driver.get("http://www.inbox.lv");
 

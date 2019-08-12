@@ -1,13 +1,14 @@
 package loginPageTest;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.Assert;
+        import org.junit.After;
+        import org.junit.AfterClass;
+        import org.junit.BeforeClass;
+        import org.junit.Test;
+        import org.openqa.selenium.By;
+        import org.openqa.selenium.WebDriver;
+        import org.openqa.selenium.WebElement;
+        import org.openqa.selenium.firefox.FirefoxDriver;
+        import org.testng.Assert;
 
 public class InboxLoginTest {
 
@@ -33,18 +34,14 @@ public class InboxLoginTest {
         WebElement profileUser = driver.findElement(By.xpath("//span[@title='meateka@inbox.lv']"));
         String mailUser = profileUser.getText();
         Assert.assertEquals("meateka@inbox.lv", mailUser);
-
-
     }
 
-    @AfterClass
+    @After
     public static void theEnd() {
 
         WebElement logoutButton = driver.findElement(By.xpath("//a[@title='Выйти']"));
         logoutButton.click();
         driver.quit();
-
-
     }
 
 }

@@ -11,7 +11,7 @@ public class LoginPage {
 
     WebDriver driver;
 
-    By username = By.xpath("//input[@id='imapuser']");
+    private static final By USERNAME = By.xpath("//input[@id='imapuser']");
     By password = By.xpath("//input[@id='pass']");
     By loginButton = By.xpath("//button[@type='submit' and @id='btn_sign-in']");
     //By advertisment = By.xpath()
@@ -31,7 +31,7 @@ public class LoginPage {
 
     public void typeUserName() {
 
-        driver.findElement(username).sendKeys("test7136");
+        driver.findElement(USERNAME).sendKeys("test7136");
 
     }
 
